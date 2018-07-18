@@ -1,0 +1,8 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/CLIP-Pkg-Base.t
+lib/CLIP/Pkg/Base.pm
+lib/CLIP/Pkg/Gencrypt_ccsd.pm
+lib/CLIP/Pkg/Gencrypt_civil.pm

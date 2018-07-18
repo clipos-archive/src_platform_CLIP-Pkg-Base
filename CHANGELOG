@@ -1,0 +1,268 @@
+# CLIP ChangeLog for dev-perl/CLIP-Pkg-Base
+
+*CLIP-Pkg-Base-1.2.0-r1 (22 Dec 2016)
+
+  22 Dec 2016; Nicolas Belouin <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.2.0-r1.ebuild, -CLIP-Pkg-Base-1.2.0.ebuild:
+  Remove use of "remove-other-perms" as it breaks optional packages listing
+
+*CLIP-Pkg-Base-1.2.0 (28 Jun 2016)
+
+  28 Jun 2016; Timothée Ravier <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.2.0.ebuild, -CLIP-Pkg-Base-1.1.26-r2.ebuild:
+  Civil crypto support (arguments given to gencrypt).
+
+*CLIP-Pkg-Base-1.1.26-r2 (20 Dec 2013)
+
+  20 Dec 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.26-r2.ebuild, -CLIP-Pkg-Base-1.1.26-r1.ebuild:
+  Force rebuild. Use clip-ccsd instead of ccsd as USE flag.
+
+*CLIP-Pkg-Base-1.1.26-r1 (22 Oct 2013)
+
+  22 Oct 2013; ANSSI <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.26-r1.ebuild, -CLIP-Pkg-Base-1.1.26.ebuild:
+  Add USE ccsd to make dependency on ccsd-sign conditional (purely
+  for build purposes).
+
+*CLIP-Pkg-Base-1.1.26 (01 Mar 2013)
+
+  01 Mar 2013; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.26.ebuild, -CLIP-Pkg-Base-1.1.25.ebuild:
+  Try harder to get a valid update in clippkg_updatedb().
+
+  28 Nov 2012; Yves-Alexis Perez <clipos@ssi.gouv.fr>
+  CLIP-Pkg-Base-1.1.25.ebuild:
+  Move EAPI declaration to first line.
+
+*CLIP-Pkg-Base-1.1.25 (20 Jun 2012)
+
+  20 Jun 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.25.ebuild, -CLIP-Pkg-Base-1.1.24.ebuild:
+  Add clippkg_list_upgrade_configurations(), which does the same
+  thing as clippkg_list_upgrade_candidates(), but excludes 
+  optional packages from the output listing.
+
+*CLIP-Pkg-Base-1.1.24 (14 Jun 2012)
+
+  14 Jun 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.24.ebuild, -CLIP-Pkg-Base-1.1.23.ebuild:
+  Return an error from clippkg_update_db() if no more than one
+  mirror can be hit.
+
+*CLIP-Pkg-Base-1.1.23 (13 Apr 2012)
+
+  13 Apr 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.23.ebuild, -CLIP-Pkg-Base-1.1.22.ebuild:
+  Fix sigcheck_start() typo.
+
+*CLIP-Pkg-Base-1.1.22 (12 Apr 2012)
+
+  12 Apr 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.22.ebuild, -CLIP-Pkg-Base-1.1.21-r1.ebuild:
+  Add $checkdate() parameter to sicheck_start(), to make use of
+  ccsd-check-daemon's new '-d' option.
+
+*CLIP-Pkg-Base-1.1.21-r1 (22 Mar 2012)
+
+  22 Mar 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.21-r1.ebuild, -CLIP-Pkg-Base-1.1.21.ebuild:
+  Force rebuild.
+
+*CLIP-Pkg-Base-1.1.21 (19 Sep 2011)
+
+  19 Sep 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.21.ebuild, -CLIP-Pkg-Base-1.1.20.ebuild:
+  Fix get_confname with /etc/shared/jail_name.
+
+*CLIP-Pkg-Base-1.1.20 (13 Sep 2011)
+
+  13 Sep 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.20.ebuild, -CLIP-Pkg-Base-1.1.19.ebuild:
+  Polish get_confname to exit on error if the jail is unknown.
+  Fix cache_get_*fields - return the newest version.
+
+*CLIP-Pkg-Base-1.1.19 (31 Aug 2011)
+
+  31 Aug 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.19.ebuild, -CLIP-Pkg-Base-1.1.18.ebuild:
+  Do not chroot ccsd-check-daemon in the case of rm core installs.
+  Requires ccsd-check 2.0.1.
+
+*CLIP-Pkg-Base-1.1.18 (17 Aug 2011)
+
+  17 Aug 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.18.ebuild, -CLIP-Pkg-Base-1.1.17.ebuild:
+  Switch signature checks to ccsd-check-daemon.
+
+*CLIP-Pkg-Base-1.1.17 (07 Jul 2011)
+
+  07 Jul 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.17.ebuild, -CLIP-Pkg-Base-1.1.16.ebuild:
+  Typo fix.
+
+*CLIP-Pkg-Base-1.1.16 (06 Jul 2011)
+
+  06 Jul 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.16.ebuild, -CLIP-Pkg-Base-1.1.15.ebuild:
+  Export function needed for clip-*config.
+
+*CLIP-Pkg-Base-1.1.15 (20 Jun 2011)
+
+  20 Jun 2011; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.15.ebuild, -CLIP-Pkg-Base-1.1.14-r1.ebuild:
+  Add level specific configuration for clip-hermes.
+
+*CLIP-Pkg-Base-1.1.14-r1 (16 May 2011)
+
+  16 May 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.14-r1.ebuild, -CLIP-Pkg-Base-1.1.14.ebuild:
+  Rbump to force rebuild.
+
+*CLIP-Pkg-Base-1.1.14 (07 Apr 2010)
+
+  07 Apr 2010; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.14.ebuild, -CLIP-Pkg-Base-1.1.13.ebuild:
+  Add clippkg_list_mirror_allowed().
+
+*CLIP-Pkg-Base-1.1.13 (01 Apr 2010)
+
+  01 Apr 2010; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.13.ebuild, -CLIP-Pkg-Base-1.1.12.ebuild:
+  Do not error out on missing files in rollback/replace functions.
+
+*CLIP-Pkg-Base-1.1.12 (11 Jan 2010)
+
+  11 Jan 2010; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.12.ebuild, -CLIP-Pkg-Base-1.1.11.ebuild:
+  Add clippkg_check_pkg_msg().
+
+*CLIP-Pkg-Base-1.1.11 (30 Sep 2009)
+
+  30 Sep 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.11.ebuild, -CLIP-Pkg-Base-1.1.10.ebuild:
+  Smallish fixes + support multiple constraints on same 
+  package in check_deps().
+
+*CLIP-Pkg-Base-1.1.10 (28 Aug 2009)
+
+  28 Aug 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.10.ebuild, -CLIP-Pkg-Base-1.1.9.ebuild:
+  Add clippkg_cache_get_all_fields().
+
+*CLIP-Pkg-Base-1.1.9 (18 Aug 2009)
+
+  18 Aug 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.9.ebuild, -CLIP-Pkg-Base-1.1.8.ebuild:
+  Do not error out of clippkg_update_db() when at least one
+  of the sources was fetched (instead of erroring out as soon
+  as one source cannot be fetched).
+
+*CLIP-Pkg-Base-1.1.8 (17 Jul 2009)
+
+  17 Jul 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.8.ebuild, -CLIP-Pkg-Base-1.1.7.ebuild:
+  New dpkg error recovery features.
+
+*CLIP-Pkg-Base-1.1.7 (16 Jun 2009)
+
+  16 Jun 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.7.ebuild, -CLIP-Pkg-Base-1.1.6.ebuild:
+  Ignore time zone info in rfc822 date conversions - time zone
+  management was buggy, and we can live with a 1 day fuzz.
+
+*CLIP-Pkg-Base-1.1.6 (28 May 2009)
+
+  28 May 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.6.ebuild, -CLIP-Pkg-Base-1.1.5.ebuild:
+  Support getting all package fields in clippkg_get_fields().
+
+*CLIP-Pkg-Base-1.1.5 (12 May 2009)
+
+  12 May 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.5.ebuild, -CLIP-Pkg-Base-1.1.4.ebuild:
+  Support configuration dependencies.
+
+*CLIP-Pkg-Base-1.1.4 (04 May 2009)
+
+  04 May 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.4.ebuild, -CLIP-Pkg-Base-1.1.3.ebuild:
+  Fix empty optional files list.
+
+*CLIP-Pkg-Base-1.1.3 (11 Mar 2009)
+
+  11 Mar 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.3.ebuild, -CLIP-Pkg-Base-1.1.2.ebuild:
+  Support multiple optional package configuration files.
+  Filter out the package names read from such files against
+  unexpeceted chars (not alphanumeric, whitespace, '-', '_' and '.').
+
+*CLIP-Pkg-Base-1.1.2 (27 Jan 2009)
+
+  27 Jan 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.2.ebuild, -CLIP-Pkg-Base-1.1.1.ebuild:
+  Remove clippkg_list_updates and clippkg_list_optional_upgrade. The first
+  is no longer useful, while the latter is moved to CLIP::Pkg::Download and
+  no longer specific to optional packages.
+  Add configurations themselves to the allowed optional hash.
+
+*CLIP-Pkg-Base-1.1.1 (21 Jan 2009)
+
+  21 Jan 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.1.ebuild, -CLIP-Pkg-Base-1.1.0.ebuild:
+  Do case-insensitive checks on package fields.
+
+*CLIP-Pkg-Base-1.1.0 (20 Jan 2009)
+
+  20 Jan 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.1.0.ebuild, -CLIP-Pkg-Base-1.0.ebuild:
+  Support for optional packages.
+
+*CLIP-Pkg-Base-1.0 (22 Oct 2008)
+
+  22 Oct 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-1.0.ebuild, -CLIP-Pkg-Base-0.6.ebuild:
+  First stable and documented release.
+
+*CLIP-Pkg-Base-0.6 (16 Oct 2008)
+
+  16 Oct 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-0.6.ebuild, -CLIP-Pkg-Base-0.5.ebuild:
+  Faster and more reliable backups / replaces.
+  Fix version comparison in get_duplicates().
+
+*CLIP-Pkg-Base-0.5 (25 Aug 2008)
+
+  25 Aug 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-0.5.ebuild, -CLIP-Pkg-Base-0.4.ebuild:
+  More backup/rollback functions.
+
+*CLIP-Pkg-Base-0.4 (21 Aug 2008)
+
+  21 Aug 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-0.4.ebuild, -CLIP-Pkg-Base-0.3.ebuild:
+  Import prune_mirror() call, originally from ::Download.
+  Use CLIP::Logger for output.
+  Add get_arch() sub.
+
+*CLIP-Pkg-Base-0.3 (20 Aug 2008)
+
+  20 Aug 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-0.3.ebuild, -CLIP-Pkg-Base-0.2.ebuild:
+  Import some functions from CLIP-Pkg-Download, to support 
+  CLIP-Pkg-Install. Support conf ages checking (on a per-conf 
+  basis) for download.
+
+*CLIP-Pkg-Base-0.2 (19 Aug 2008)
+
+  19 Aug 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +CLIP-Pkg-Base-0.2.ebuild, -CLIP-Pkg-Base-0.1.ebuild:
+  Add mirror update support functions (deplists, duplicates, etc...).
+  Add file locking functions.
+
+*CLIP-Pkg-Base-0.1 (18 Aug 2008)
+
+  18 Aug 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  CLIP-Pkg-Base-0.1.ebuild:
+  Initial import. Preliminary version of common package management
+  functions in perl.

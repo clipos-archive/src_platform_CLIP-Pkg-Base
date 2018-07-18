@@ -1,0 +1,107 @@
+Revision history for Perl extension CLIP::Pkg::Base.
+
+1.2.0 Thu Jul 7 2016
+	- Civil cryptography support using gen-crypt.
+
+1.1.26 Fri Mar 01 2013
+	- accept partial errors in clippkg_updatedb() when run
+	through clip_install.
+
+1.1.25 Wed Jun 20 2012
+	- add clippkg_list_upgrade_configurations(), which works
+	just like clippkg_list_upgrade_candidates() but does not 
+	list optional packages.
+
+1.1.24 Thu Jun 14 2012
+	- clippkg_update_db() returns an error whenever only 
+	a single mirror was hit - 2 hits or more are required
+	for a successful update.
+
+1.1.23 Fri Apr 13 2012
+	- fix clippkg_sigcheck_start()...
+
+1.1.22 Thu Apr 12 2012
+	- add a $checkdate parameter to clippkg_sigcheck_start()
+
+1.1.21 Mon Sep 19 2011
+	- fix get_confname with /etc/shared/jail_name
+
+1.1.20 Tue Sep 13 2011
+  	- polish get_confname to exit on error if the jail is unknown
+    	- fix cache_get_*fields - return the newest version
+
+1.1.19 Wed Aug 31 2011
+	- do not chroot the ccsd check daemon in the case of rm core installs
+
+1.1.18 Wed Aug 17 2011
+	- switch signature checks to ccsd-check-daemon
+
+1.1.14 Tue Apr 6 2010
+	- add clippkg_list_mirror_optional()
+
+1.1.13 Thu Apr 1 2010
+	- do not error out on missing files in 
+	clippkg_{replace,rollback,clean,backup}()
+
+1.1.12 Mon Jan 11 2010
+	- add clippkg_check_pkg_msg() 
+
+1.1.11 Wed Sep 30 2009
+	- support multiple constraints on the same package name in 
+	  check_deps()
+	- miscellaneous smallish fixes
+	- fit to 80 chars lines
+
+1.1.10 Fri Aug 20 2009
+	- add clippkg_cache_get_all_fields().
+
+1.1.9  Tue Aug 18 2009
+	- do not error out in clippkg_update_db() when some, but not all,
+	  sources cannot be fetched.
+
+1.1.8  Fri Jul 17 2009
+	- add clippkg_apt_error function to fix apt state based on an
+	  apt error output. Automatically called from 
+	  clippkg_update_db() if necessary.
+
+1.1.7  Tue Jun 16 2009
+	- do not take time zone into account in clippkg_format_date(), to
+	  avoid hard (and up to now, buggy) conversions
+
+1.1.6  Tue May 28 2009
+	- support reading all fields in clippkg_get_fields()
+
+1.1.5  Tue May 12 2009
+	- support configuration dependencies
+
+1.1.4  Mon May 04 2009
+	- fix management of empty optional package files list.
+	- preserve ownership when replacing / rollbacking files / directories.
+
+1.1.3  Wed Mar 11 2009
+	- work on lists of optional config files rather than single ones.
+	- filter contents of optional config files for unsupported characters
+	  (all except alphanumeric, '-', '.', '_' and whitespace).
+
+1.1.2  Tue Jan 27 2009
+	- remove clippkg_list_updates and clippkg_list_optional_upgrade. The first 
+	  is no longer useful, while the latter is moved to CLIP::Pkg::Download and
+	  no longer specific to optional packages.
+	- add configurations themselves to the allowed optional hash.
+
+1.1.1  Wed Jan 21 2009
+	- do case-insensitive checks on package fields, since dpkg / apt sometimes
+	  disagree on case sensitivity.
+
+1.1.0  Tue Jan 20 2009
+	- support for additional, 'optional' packages, that appear in the 
+	  Suggests: fields of configurations.
+	- support for querying the apt-cache directly.
+
+1.0.0  Wed Oct 22 2008
+	- first 'stable' and documented version.
+
+0.0.1  Mon Aug 18 16:31:17 2008
+	- original version; created by h2xs 1.23 with options
+		-AXc -n CLIP::Pkg::Base
+
